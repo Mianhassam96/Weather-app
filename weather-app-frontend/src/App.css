@@ -1,0 +1,175 @@
+/* General app container */
+.app-container {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0e7ae6, #03942e); /* Light background gradient */
+}
+
+/* Dynamic background based on weather */
+.clear-sky {
+  background: linear-gradient(to right, #00b4d8, #90e0ef);
+}
+
+.cloudy {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.rainy {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.stormy {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+.snowy {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.foggy {
+  background: linear-gradient(to right, #636fa4, #a9c0ff);
+}
+
+.default-weather {
+  background: #f7f7f7;
+}
+
+/* Main content container */
+.content-container {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.4);
+}
+
+/* Weather Box Styling */
+.weather-box {
+  background: linear-gradient(135deg, #e3f2fd, #6e9dc4); /* Light blue gradient */
+  color: #212121; /* Dark text for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.weather-box h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0d47a1; /* Darker blue for city name */
+}
+
+.weather-box p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.weather-box .unit-toggle {
+  background-color: #2196f3; /* Primary blue */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-box .unit-toggle:hover {
+  background-color: #0d47a1; /* Darker blue on hover */
+}
+
+/* Forecast container styling */
+.forecast-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Grid for 5-Day Forecast */
+.forecast-grid {
+  display: flex;
+  justify-content: space-around; /* Space out the forecast cards */
+  gap: 20px; /* Adds space between each card */
+  flex-wrap: wrap; /* Allows wrapping of items on smaller screens */
+}
+
+/* Forecast card styling */
+.forecast-card {
+  background: linear-gradient(135deg, #fff9c4, #ffecb3); /* Warm yellow gradient */
+  border: 1px solid #fbc02d;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 120px; /* Smaller card width */
+  height: 180px; /* Smaller card height */
+  flex-grow: 1; /* Cards will grow to fit space, if needed */
+  max-width: 150px; /* Ensures the cards don't grow too large */
+}
+
+/* Forecast card image */
+.forecast-card img {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+/* Forecast card text styling */
+.forecast-card p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+/* Text for the 5-Day Forecast title */
+.forecast-container h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.map-container {
+  margin-top: 20px;
+  border: 2px solid #bbdefb;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #0d47a1; /* Footer dark blue */
+  color: white;
+  font-size: 0.9rem;
+  position: relative; /* Footer inside the content flow */
+  bottom: 0;
+  width: 100%;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer a {
+  color: #07f0dc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
